@@ -1,0 +1,17 @@
+# your email address and password to send the email
+login you@email.com
+password pass
+
+# emails to send to if item is in stock
+email you@email.com
+email friend@email.com
+email friend2@email.com
+
+# switch tracking urls
+url https://www.walmart.ca/en/ip/nintendo-switch-console-with-neon-blue-and-neon-red-joy-con/6000196784704
+url http://www.bestbuy.ca/en-ca/product/nintendo-switch-nintendo-switch-console-with-neon-red-blue-joy-con-misc/10381162.aspx+&cd=3&hl=en&ct=clnk&gl=ca
+url https://www.thesource.ca/en-ca/gaming/nintendo-switch/nintendo-switch-consoles-and-bundles/nintendo-switch%E2%84%A2-32gb-console-with-neon-joy%E2%80%91con%E2%84%A2/p/108068867#product-store-availability
+url https://www.amazon.ca/Nintendo-Switch-Console-Neon-Joy-Con/dp/B01MUAGZ49/ref=sr_1_2?ie=UTF8&qid=1498142221&sr=8-2&keywords=switch
+price 400.00
+url http://www.toysrus.ca/product/index.jsp?productId=119815606
+url https://www.ebgames.ca/Switch/Games/730034/nintendo-switch-with-neon-blue-and-neon-red-joy-con

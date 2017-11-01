@@ -1,0 +1,38 @@
+1498757785485	geckodriver	INFO	Listening on 127.0.0.1:52258
+1498757787693	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd32 v= and igd10iumd32.dll v=0.0.0.0
+1498757791145	Marionette	INFO	Listening on port 52264
+1498757791336	Marionette	WARN	TLS certificate errors will be ignored for this session
+1498757850824	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1498757850835	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1498757850842	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1498769194517	Marionette	INFO	Ceased listening
+due to missing DLLs igd10umd32 v= and igd10iumd32.dll v=0.0.0.0
+1498757862496	Marionette	INFO	Listening on port 52329
+1498757862688	Marionette	WARN	TLS certificate errors will be ignored for this session
+1498757866883	Marionette	INFO	Ceased listening
+1498768322304	geckodriver	INFO	Listening on 127.0.0.1:52509
+1498768324361	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd32 v= and igd10iumd32.dll v=0.0.0.0
+1498768326441	Marionette	INFO	Listening on port 52515
+1498768327488	Marionette	WARN	TLS certificate errors will be ignored for this session
+1498768333083	Marionette	INFO	Ceased listening
+1498768461304	geckodriver	INFO	Listening on 127.0.0.1:52545
+1498768463416	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs igd10umd32 v= and igd10iumd32.dll v=0.0.0.0
+1498768465744	Marionette	INFO	Listening on port 52551
+1498768466581	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://static.bbycastatic.ca/jmvc/libraries/libraries.min.js?v=2.53, line 43: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://static.bbycastatic.ca/jmvc/libraries/libraries.min.js?v=2.53, line 145: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://static.bbycastatic.ca/jmvc/libraries/libraries.min.js?v=2.53, line 33: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://static.bbycastatic.ca/jmvc/libraries/libraries.min.js?v=2.53, line 85: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://static.bbycastatic.ca/jmvc/libraries/libraries.min.js?v=2.53, line 7: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://static.bbycastatic.ca/jmvc/libraries/libraries.min.js?v=2.53, line 45: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+1498768491344	Marionette	INFO	Ceased listening
+1498768492109	geckodriver::marionette	ERROR	Failed to kill browser process
