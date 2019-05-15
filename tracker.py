@@ -30,16 +30,16 @@ def _site_defs():
         },
 
         'walmart' : {
-            'xpath' : '//*[@id="favourite-a2c-container"]/button',
+            'xpath' : '//*[@id="favourite-a2c-container"]/div[2]/button',
             'attribute' : 'disabled',
             'value' : 'true',
             'price_xpath' : '//*[@id="product-purchase-cartridge"]/div[3]/div[1]/div[1]/div[1]'
         },
 
         'amazon' : {
-            'xpath' : '//*[@id="outOfStock"]',
+            'xpath' : '//*[@id="add-to-cart-button"]',#'//*[@id="outOfStock"]',
             'attribute' : 'id',
-            'value' : 'outOfstock',
+            'value' : 'true',
             'price_xpath' : '//*[@id="priceblock_ourprice"]'
         },
 
@@ -110,6 +110,7 @@ def get_price(price_string):
 def check_site(driver, site):
 
     if 'Not Found' in driver.title:
+        print('product not found')
         return False
 
     if 'price' in site:
@@ -119,12 +120,17 @@ def check_site(driver, site):
             print('price_xpath not found:')
             print('  ' + site['price_xpath'])
             return False
+        else:
+            print('price_xpath found')
 
         text_price = element.text
         price = get_price(text_price)
 
-        if float(site['price']) > price:
+        if float(site['price']) < price:
+            print('price is less: ' + site['price'] + '<' + str(price))
             return False
+        else:
+            print('price is more: ' + site['price'] + '>' + str(price))
 
     try:
         element = driver.find_element_by_xpath(site['xpath'])
@@ -132,10 +138,16 @@ def check_site(driver, site):
         print('xpath not found:')
         print('  ' + site['xpath'])
         return False
+    else:
+        print('xpath found')
 
     try:
         if element.get_attribute(site['attribute']) != site['value']:
+            print('site attribute does not match out of stock attribute')
+            print('Match Found!')
             return True
+        else:
+            print('site attribute matches out of stock attribute')
     except:
         print('attribute not found:')
         print('  ' + site['attribute'])
@@ -189,19 +201,18 @@ def sendemail(from_addr, to_addr_list,
               login, password,
               smtpserver='smtp.gmail.com:587'):
 
-    print(type(to_addr_list))
-
-    header = 'From: %s\n' % from_addr
-    header += 'To: %s\n' % ','.join(to_addr_list)
-    header += 'Subject: %s\n' % subject
-    header += '\n'
-    message = header + message
+    header = 'From: %s\r\n' % from_addr
+    header += 'To: %s\r\n' % ','.join(to_addr_list)
+    header += 'Subject: %s\r\n' % subject
+    header += '\r\n'
+    message = header + '\r\n' + message
 
     server = smtplib.SMTP(smtpserver)
+    server.ehlo()
     server.starttls()
     server.login(login, password)
     server.sendmail(from_addr, to_addr_list, message)
-    server.quit()
+    server.close()
 
 def main():
 
@@ -237,6 +248,13 @@ def main():
     login = options['login']
     password = options['password']
 
-    #sendemail(from_addr, to_addr_list, subject, message, login, password)
+    print('sending email')
+    print('from: ' + from_addr)
+    print('      ' + password)
+    print('to:')
+    for to in to_addr_list:
+        print(to)
+
+    sendemail(from_addr, to_addr_list, subject, message, login, password)
 
 main()
